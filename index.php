@@ -11,7 +11,7 @@ $resultado = explode('","',$contenido);
 $countrycode = $resultado[3];
 $countryfull = explode('":"',$countrycode);
 
-var_dump($countryfull);
+var_dump($_SERVER);
 
 //if($countryfull[1] != "MX"){
 //    header('Location: '.$redirectURL);

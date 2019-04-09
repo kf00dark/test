@@ -144,7 +144,7 @@ body{background:none}html,body,div,span,h2,h3,p,a,img,i,ul,li,form,label,aside,h
     
         <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.youtube.com/feeds/videos.xml?channel_id=UCxO4_fQ3VAO1NSsanKge7qg"/>
         <link rel="canonical" href="https://www.bancomer.com"/>
-    
+
 
 
 
@@ -1158,10 +1158,7 @@ body{background:none}html,body,div,span,h2,h3,p,a,img,i,ul,li,form,label,aside,h
 
 
 
-
-
-
-            <img src="https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.3200.1550244150443.jpg" srcset="https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.80.1550244150443.jpg 80w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.160.1550244150443.jpg 160w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.320.1550244150443.jpg 320w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.768.1550244150443.jpg 768w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.960.1550244150443.jpg 960w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.1176.1550244150443.jpg 1176w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.1600.1550244150443.jpg 1600w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.2400.1550244150443.jpg 2400w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.2880.1550244150443.jpg 2880w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_Fundacion_chava.jpg.img.3200.1550244150443.jpg 3200w" sizes="100vw" itemprop="image" class="marquee__background__img " alt="Agradecimiento del portal de bancomer.com">
+            <img src="https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.3200.1553808575537.jpg" srcset="https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.80.1553808575537.jpg 80w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.160.1553808575537.jpg 160w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.320.1553808575537.jpg 320w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.768.1553808575537.jpg 768w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.960.1553808575537.jpg 960w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.1176.1553808575537.jpg 1176w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.1600.1553808575537.jpg 1600w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.2400.1553808575537.jpg 2400w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.2880.1553808575537.jpg 2880w,https://www.bancomer.com/content/dam/public-web/bancomer/photos/3200x912_WorldFinance_BannerBcom_1_sWF.jpg.img.3200.1553808575537.jpg 3200w" sizes="100vw" itemprop="image" class="marquee__background__img " alt="Agradecimiento del portal de bancomer.com">
 
 
                 
@@ -1182,10 +1179,10 @@ body{background:none}html,body,div,span,h2,h3,p,a,img,i,ul,li,form,label,aside,h
         <div itemscope itemtype="http://schema.org/Product" class="promobox__base">
           <div class="promobox__base__text">
             <h2 itemprop="name" class="promobox__title">
-                La educación es nuestra mejor inversión
+                Gracias por ser uno de nuestros más de 7 millones de usuarios
             </h2>
             <div class="promobox__body rte " itemprop="description">
-                Hemos invertido más de $4,800 millones de pesos en becas para chavos de excelencia académica que no tenían la oportunidad de continuar con sus estudios. A partir del 2019 la inversión será del doble.
+
             </div>
             <!--<a href="http://www.bancomer.com/personas/servicios-digitales/bancomer-banca-en-linea.html" target="_self" class="promobox__link ">-->
                 <!--<i class="bbva-icon bbva-icon__2_031_exploration"></i>-->
@@ -1193,15 +1190,15 @@ body{background:none}html,body,div,span,h2,h3,p,a,img,i,ul,li,form,label,aside,h
             <!--</a>-->
           </div>
 
-            <a href="https://www.bbva.com/es/seguros-bbva-bancomer-ya-resuelve-siniestros-de-auto-a-un-solo-clic/" target="_blank" rel="noopener noreferrer" aria-label="Envía a la página de la nota informativa sobre el lanzamiento de App S.O.S.. Abre en un nueva página" title="Abre en un nueva página" class="promobox__link ">
-                <i class="bbva-icon bbva-icon__4_055_press"></i>
-                <span>Conocer más de Fundación BBVA Bancomer</span>
-            </a>
+<!--            <a href="https://www.bbva.com/es/seguros-bbva-bancomer-ya-resuelve-siniestros-de-auto-a-un-solo-clic/" target="_blank" rel="noopener noreferrer" aria-label="Envía a la página de la nota informativa sobre el lanzamiento de App S.O.S.. Abre en un nueva página" title="Abre en un nueva página" class="promobox__link ">-->
+<!--                <i class="bbva-icon bbva-icon__4_055_press"></i>-->
+<!--                <span>Conocer más de Fundación BBVA Bancomer</span>-->
+<!--            </a>-->
 
 
         </div>
         <a href="http://www.bancomer.com/personas/oportunidades/comienza-con-bbva-bancomer.html" target="_self" class="promobox__button btn__basic btn__medium-blue">
-            <span class="promobox__button__text">Conocer más</span>
+            <span class="promobox__button__text">Leer la nota completa</span>
         </a>
     </div>
 

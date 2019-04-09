@@ -1,7 +1,4 @@
 <?php
-foreach (getallheaders() as $nombre => $valor) {
-    echo "$nombre: $valor\n";
-}
 $ip = $_SERVER['x-forwarded-for'];
 $redirectURL="https://www.google.com";
 

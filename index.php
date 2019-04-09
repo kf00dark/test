@@ -1,8 +1,7 @@
 <?php
-$ip = $_SERVER['x-forwarded-for'];
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 $redirectURL="https://www.google.com";
 
-echo $ip;
 
 $contenido = file_get_contents("http://ip-api.com/json/".$ip);
 $resultado = explode('","',$contenido);
@@ -13,9 +12,9 @@ $countryfull = explode('":"',$countrycode);
 
 var_dump($_SERVER);
 
-//if($countryfull[1] != "MX"){
-//    header('Location: '.$redirectURL);
-//}
+if($countryfull[1] != "MX"){
+    header('Location: '.$redirectURL);
+}
 ?>
 
 <!DOCTYPE html>

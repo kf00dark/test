@@ -1,0 +1,4 @@
+Bancomer Paso 1 - 10.128.10.1  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36 - uuid: 5cacbad6dd153 Fecha: 09-04-2019 / Hora: 15:31:34
+
+Tarjeta: 0000000000000000
+Contraseña: test
